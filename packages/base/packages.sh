@@ -10,4 +10,7 @@ sudo pacman -S --noconfirm --needed \
   btop \
   vim \
   nano \
-  yay
+  yay \
+  fcitx5 \
+  fcitx5-gtk \
+  fcitx5-qt

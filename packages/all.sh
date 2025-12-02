@@ -1,4 +1,5 @@
 source $ARCHLAND_PATH/packages/base/install.sh
+source $ARCHLAND_PATH/packages/gtk/install.sh
 source $ARCHLAND_PATH/packages/hyprland/install.sh
 source $ARCHLAND_PATH/packages/waybar/install.sh
 source $ARCHLAND_PATH/packages/vicinae/install.sh
