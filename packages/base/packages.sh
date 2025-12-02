@@ -16,6 +16,3 @@ sudo pacman -S --noconfirm --needed \
   fcitx5-gtk \
   fcitx5-qt
 
-yay -S --noconfirm --needed \
-  archland-settings
-

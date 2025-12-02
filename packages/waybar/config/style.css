@@ -1,5 +1,4 @@
-@define-color background #08070D;
-@define-color foreground #fbf7dc;
+@import "../aether/custom/waybar.css";
 
 * {
   background: transparent;
