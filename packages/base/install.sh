@@ -7,4 +7,5 @@ sudo pacman -S --noconfirm --needed \
   fastfetch \
   btop \
   vim \
-  nano
+  nano \
+  yay
