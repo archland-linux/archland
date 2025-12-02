@@ -3,4 +3,8 @@
 sudo pacman -S --noconfirm --needed \
   uwsm \
   git \
-  alacritty
+  alacritty \
+  fastfetch \
+  btop \
+  vim \
+  nano
