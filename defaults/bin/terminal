@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Archland terminal wrapper
+# Allows users to change the default terminal without modifying configs
+
+CONFIG_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/archland/terminal"
+DEFAULT_TERMINAL="alacritty"
+
+# Read terminal from config file if it exists
+if [[ -f "$CONFIG_FILE" ]]; then
+  TERMINAL=$(cat "$CONFIG_FILE" | tr -d '[:space:]')
+fi
+
+# Fall back to default if config is empty or doesn't exist
+TERMINAL="${TERMINAL:-$DEFAULT_TERMINAL}"
+
+# Check if terminal exists
+if ! command -v "$TERMINAL" &> /dev/null; then
+  echo "Terminal '$TERMINAL' not found. Falling back to $DEFAULT_TERMINAL"
+  TERMINAL="$DEFAULT_TERMINAL"
+fi
+
+# Execute terminal with any passed arguments
+exec "$TERMINAL" "$@"
