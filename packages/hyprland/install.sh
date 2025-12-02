@@ -4,8 +4,7 @@ echo "Installing Hyprland and dependencies..."
 sudo pacman -S --noconfirm --needed \
   hyprland
 
-echo "Archland path: $ARCHLAND_PATH"
 echo "Setting up Hyprland configuration..."
 rm -rf ~/.config/hypr
 mkdir -p ~/.config/hypr
-cp -r $ARCHLAND_PATH/packages/hyprland/config ~/.config/hypr
+cp -r $ARCHLAND_PATH/packages/hyprland/config/* ~/.config/hypr
