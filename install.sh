@@ -16,7 +16,7 @@ echo "Updating package database and installing git..."
 sudo pacman -Syu --noconfirm --needed git
 
 echo "Cloning Archland installation scripts..."
-ARCHLAND_PATH=$(mktemp -d /tmp/archland-XXXXXX)
+export ARCHLAND_PATH=$(mktemp -d /tmp/archland-XXXXXX)
 git clone https://github.com/archland-linux/archland.git $ARCHLAND_PATH
 
 echo "Running pre-flight installation script..."
