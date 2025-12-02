@@ -1,0 +1,244 @@
+@define-color background #08070D;
+@define-color foreground #fbf7dc;
+
+* {
+  background: transparent;
+  color: @foreground;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'CaskaydiaMono Nerd Font';
+  font-size: 12px;
+}
+
+/* Main bar - completely transparent */
+window#waybar {
+  background: transparent;
+}
+
+/* Module containers */
+.modules-left {
+  margin-left: 8px;
+  padding: 3px 0;
+}
+
+.modules-center {
+  padding: 3px 0;
+}
+
+.modules-right {
+  margin-right: 8px;
+  padding: 3px 0;
+}
+
+/* Workspaces - floating pill design */
+#workspaces {
+  background: alpha(@background, 0.6);
+  border-radius: 10px;
+  padding: 2px 4px;
+  margin-left: 0;
+  border: 1px solid alpha(@foreground, 0.08);
+}
+
+#workspaces button {
+  all: initial;
+  padding: 3px 8px;
+  margin: 0 1px;
+  min-width: 20px;
+  border-radius: 8px;
+  background: transparent;
+  color: alpha(@foreground, 0.7);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+  background: alpha(@foreground, 0.12);
+  color: @foreground;
+}
+
+#workspaces button.active {
+  background: alpha(@foreground, 0.2);
+  color: @foreground;
+  font-weight: 600;
+}
+
+#workspaces button.empty {
+  opacity: 0.25;
+}
+
+#workspaces button.empty:hover {
+  opacity: 0.5;
+}
+
+/* Icon modules - floating pill style */
+#cpu,
+#battery,
+#pulseaudio,
+#custom-archland,
+#custom-screenrecording-indicator,
+#custom-coffee,
+#custom-update,
+#bluetooth,
+#network {
+  min-width: 20px;
+  padding: 4px 8px;
+  margin: 0 2px;
+  border-radius: 10px;
+  background: alpha(@background, 0.6);
+  border: 1px solid alpha(@foreground, 0.08);
+  transition: all 0.2s ease;
+}
+
+#cpu:hover,
+#battery:hover,
+#pulseaudio:hover,
+#custom-archland:hover,
+#custom-coffee:hover,
+#custom-update:hover,
+#bluetooth:hover,
+#network:hover {
+  background: alpha(@background, 0.75);
+  border-color: alpha(@foreground, 0.15);
+  color: @foreground;
+}
+
+#custom-archland {
+  background: alpha(@background, 0.6);
+  border-color: alpha(@foreground, 0.08);
+  padding: 4px 8px;
+  margin: 0 2px;
+  margin-left: 0;
+  font-weight: 600;
+  font-size: 12px;
+  min-width: 20px;
+}
+
+#custom-archland:hover {
+  background: alpha(@background, 0.75);
+  border-color: alpha(@foreground, 0.15);
+}
+
+/* Clock - floating pill */
+#clock {
+  margin: 0 3px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: alpha(@background, 0.6);
+  border: 1px solid alpha(@foreground, 0.08);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+#clock:hover {
+  background: alpha(@background, 0.75);
+  border-color: alpha(@foreground, 0.15);
+}
+
+/* Tray and expander */
+#tray {
+  margin-right: 0;
+  padding: 3px 6px;
+  border-radius: 10px;
+  background: alpha(@background, 0.6);
+  border: 1px solid alpha(@foreground, 0.08);
+}
+
+#custom-expand-icon {
+  margin-right: 0;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: alpha(@background, 0.6);
+  border: 1px solid alpha(@foreground, 0.08);
+  transition: all 0.2s ease;
+}
+
+#custom-expand-icon:hover {
+  background: alpha(@background, 0.75);
+  border-color: alpha(@foreground, 0.15);
+}
+
+/* Group styling */
+#group-tray-expander {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-right: 0;
+}
+
+/* Status indicators */
+#custom-update {
+  font-size: 11px;
+  color: alpha(@foreground, 0.9);
+}
+
+#custom-screenrecording-indicator {
+  min-width: 20px;
+  margin-left: 2px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  background: alpha(@background, 0.6);
+  border: 1px solid alpha(@foreground, 0.08);
+  transition: all 0.2s ease;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #ff6b6b;
+  background: alpha(#ff6b6b, 0.2);
+  border-color: alpha(#ff6b6b, 0.3);
+}
+
+/* Battery states */
+#battery.warning {
+  color: #ffa94d;
+  background: alpha(#ffa94d, 0.15);
+  border-color: alpha(#ffa94d, 0.25);
+}
+
+#battery.critical {
+  color: #ff6b6b;
+  background: alpha(#ff6b6b, 0.2);
+  border-color: alpha(#ff6b6b, 0.3);
+}
+
+#battery.charging {
+  color: #51cf66;
+}
+
+/* Pulseaudio muted state */
+#pulseaudio.muted {
+  color: alpha(@foreground, 0.4);
+  opacity: 0.6;
+}
+
+/* Network states */
+#network.disconnected {
+  color: alpha(@foreground, 0.4);
+  opacity: 0.6;
+}
+
+/* Bluetooth states */
+#bluetooth.disabled {
+  color: alpha(@foreground, 0.4);
+  opacity: 0.6;
+}
+
+/* Modern tooltips */
+tooltip {
+  background: alpha(@background, 0.95);
+  border-radius: 8px;
+  padding: 6px 10px;
+  border: 1px solid alpha(@foreground, 0.15);
+  font-size: 11px;
+  color: @foreground;
+}
+
+/* Hidden elements */
+.hidden {
+  opacity: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}

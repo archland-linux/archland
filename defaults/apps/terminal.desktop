@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Terminal
+Comment=Default terminal emulator
+Exec=alacritty
+Terminal=true
+Categories=System;TerminalEmulator;
