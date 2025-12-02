@@ -24,3 +24,8 @@ chmod +x ~/.local/bin/terminal
 echo "Setting default terminal..."
 mkdir -p ~/.config/archland
 echo "alacritty" > ~/.config/archland/terminal
+
+echo "Adding ~/.local/bin to PATH..."
+if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' ~/.bashrc 2>/dev/null; then
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+fi
