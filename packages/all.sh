@@ -4,5 +4,6 @@ source $ARCHLAND_PATH/packages/hyprland/install.sh
 source $ARCHLAND_PATH/packages/waybar/install.sh
 source $ARCHLAND_PATH/packages/bluetooth/install.sh
 source $ARCHLAND_PATH/packages/wifi/install.sh
+source $ARCHLAND_PATH/packages/audio/install.sh
 source $ARCHLAND_PATH/packages/vicinae/install.sh
 source $ARCHLAND_PATH/packages/theme/install.sh

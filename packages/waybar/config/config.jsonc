@@ -68,6 +68,15 @@
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "nm-connection-editor"
   },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "tooltip-format": "{volume}% - {desc}",
+    "on-click": "pavucontrol"
+  },
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
