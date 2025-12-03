@@ -26,6 +26,6 @@ source $ARCHLAND_PATH/pre-flight/install.sh
 echo "Installing packages"
 source $ARCHLAND_PATH/packages/all.sh
 
-echo "Starting Hyprland..."
-pkill -x hyprland
-setsid uwsm-app -- hyprland >/dev/null 2>&1 &
+echo "Installation complete! Restarting in 3 seconds..."
+sleep 3
+sudo reboot

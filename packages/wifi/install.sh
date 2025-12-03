@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Exit immediately if a command exits with a non-zero status
-set -e
-
 echo "Installing iwd (iNet Wireless Daemon) and WiFi tools..."
 sudo pacman -S --noconfirm --needed \
   iwd \

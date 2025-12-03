@@ -7,3 +7,4 @@ source $ARCHLAND_PATH/packages/wifi/install.sh
 source $ARCHLAND_PATH/packages/audio/install.sh
 source $ARCHLAND_PATH/packages/vicinae/install.sh
 source $ARCHLAND_PATH/packages/theme/install.sh
+source $ARCHLAND_PATH/packages/sddm/install.sh
