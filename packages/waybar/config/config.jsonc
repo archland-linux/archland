@@ -51,7 +51,7 @@
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": false
   },
-"bluetooth": {
+  "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
     "format-off": "󰂲",
@@ -60,22 +60,28 @@
     "on-click": "blueberry"
   },
   "network": {
-    "format-wifi": "󰤨",
-    "format-ethernet": "󰈀",
-    "format-disconnected": "󰤭",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "{ifname}: {ipaddr}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "nm-connection-editor"
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "rfkill unblock wifi && terminal impala"
   },
   "pulseaudio": {
     "format": "{icon}",
+    "on-click": "terminal wiremix",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
     "format-muted": "󰝟",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"]
-    },
-    "tooltip-format": "{volume}% - {desc}",
-    "on-click": "pavucontrol"
+    }
   },
   "group/tray-expander": {
     "orientation": "inherit",
