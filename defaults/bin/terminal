@@ -21,4 +21,9 @@ if ! command -v "$TERMINAL" &> /dev/null; then
 fi
 
 # Execute terminal with any passed arguments
-exec "$TERMINAL" "$@"
+# If arguments are provided, use -e flag to execute the command
+if [[ $# -gt 0 ]]; then
+  exec "$TERMINAL" -e "$@"
+else
+  exec "$TERMINAL"
+fi
