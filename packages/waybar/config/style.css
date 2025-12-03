@@ -1,4 +1,4 @@
-@import "../archland/theme/colors.css";
+@import "../archland/theme/base.css";
 
 * {
   background: transparent;
@@ -6,7 +6,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: 'JetBrainsMono Nerd Font';
+  font-family: var(--main-font);
   font-size: 12px;
 }
 

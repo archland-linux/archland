@@ -1,0 +1,7 @@
+@define-color background #0e0f11;
+@define-color foreground #faf9f9;
+@define-color border #292b2e;
+
+:root {
+    --main-font: "JetBrainsMono Nerd Font";
+}
