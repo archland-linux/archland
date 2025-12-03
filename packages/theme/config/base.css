@@ -2,6 +2,5 @@
 @define-color foreground #faf9f9;
 @define-color border #292b2e;
 
-:root {
-    --main-font: "JetBrainsMono Nerd Font";
-}
+/* Standard font family - GTK CSS doesn't support CSS variables for non-color values
+ * Use: font-family: "JetBrainsMono Nerd Font"; */
