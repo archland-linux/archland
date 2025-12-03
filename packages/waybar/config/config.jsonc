@@ -51,13 +51,22 @@
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": false
   },
-  "bluetooth": {
-    "format": "",
+"bluetooth": {
+    "format": "",
     "format-disabled": "󰂲",
     "format-off": "󰂲",
-    "format-connected": "",
+    "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueberry"
+  },
+  "network": {
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤭",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname}: {ipaddr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "nm-connection-editor"
   },
   "group/tray-expander": {
     "orientation": "inherit",
