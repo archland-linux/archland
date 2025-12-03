@@ -10,4 +10,5 @@ To implement features check `omarchy` folder to see how they implemented and use
 
 ## Guidelines
 
-Make sure you follow the current project's pattern and write clean code.
+- Make sure you follow the current project's pattern and write clean code.
+- Implement new features as new packages to keep the modularity.
